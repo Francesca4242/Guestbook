@@ -73,13 +73,18 @@
   crossorigin="anonymous"></script>
   <script type="text/javascript">
   	$( document ).ready(function() {
-	   (function(){
-	      emailjs.init("user_Q2aPSS4PCO5QNRM3R9zz5");
-	   })();
+	   
+	    emailjs.init("user_Q2aPSS4PCO5QNRM3R9zz5");
+
 
 	   $("#send").click(function() {
 		   	// parameters: service_id, template_id, template_parameters
-		    emailjs.send("petriepeaches4_gmail_com","feedback_form",{html_message:$("#Text1").val()});
+		    emailjs.send("petriepeaches4_gmail_com","feedback_form",{html_message:$("#Text1").val()})
+		    .then(function(response) {
+			   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+			}, function(err) {
+			   console.log("FAILED. error=", err);
+			});
 
 	   });
 	});
