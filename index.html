@@ -83,6 +83,7 @@
 		    .then(function(response) {
 			   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
 			}, function(err) {
+			    alert(err);
 			   console.log("FAILED. error=", err);
 			});
 
