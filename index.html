@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+	<title> Museum Guest Book</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Pinyon+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_Q2aPSS4PCO5QNRM3R9zz5");
+   })();
+</script>
+	<style>
+	.title{
+		margin:auto;
+		width:50%;
+		border: 3px solid black;
+		background:rgba(255,255,255,0.05);
+		border-radius: 10px;
+	
+	}
+	body{
+		background: url(book.jpeg);
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+
+	
+	header{
+		font-family: 'Cabin Sketch', cursive;
+		font-size: 75px;
+		margin: auto;
+		text-align: center;
+		background:rgba(255,255,255,0.6);
+	}
+	p{
+		font-family: 'Pinyon Script', cursive;
+		font-size: 30px;
+		margin: auto;
+		text-align: center;
+		background:rgba(255,255,255,0.6);
+	}
+	.form{
+		margin:auto;
+		width:50%;
+		background:rgba(255,255,255,0.05);
+		margin-top: 100px;
+		border-radius: 10px;
+		border: 3px solid black;
+
+
+	}
+	input[type="text"]{
+		width:80%;
+		height:80%;
+		padding:30px;
+		margin:auto;
+		height:200px;
+		font-family: 'Caveat', cursive;
+		font-size:20px;
+
+
+	}
+	input[type=submit]{
+		font-family: 'Pinyon Script', cursive;
+		font-size:25px;
+		background:rgba(255,255,255,1);
+
+	}
+	</style>
+</head>
+<body>
+	<div class=title>
+	<header>Museum Guest Book</header>
+	
+</div>
+<div class=form>
+	<p>Submit your thoughts and ideas here!</p>
+	<form>
+		<p><input type="text"></p>
+
+		
+		<p><input type="submit"></p>
+	</form>
+</div>
+
+
+</body>
