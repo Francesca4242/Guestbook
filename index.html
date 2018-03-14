@@ -4,11 +4,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Pinyon+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_Q2aPSS4PCO5QNRM3R9zz5");
-   })();
-</script>
+
+
 	<style>
 	.title{
 		margin:auto;
@@ -67,8 +64,28 @@
 
 	}
 	</style>
+
 </head>
 <body>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  	$( document ).ready(function() {
+	   (function(){
+	      emailjs.init("user_Q2aPSS4PCO5QNRM3R9zz5");
+	   })();
+
+	   $("#send").click(function() {
+		   	// parameters: service_id, template_id, template_parameters
+		    emailjs.send("petriepeaches4_gmail_com","feedback_form",{html_message:$("#Text1").text()});
+
+	   });
+	}
+</script>
+
+
 	<div class=title>
 	<header>Museum Guest Book</header>
 	
@@ -76,10 +93,10 @@
 <div class=form>
 	<p>Submit your thoughts and ideas here!</p>
 	<form>
-		<p><textarea name="Text1" cols="40" rows="5"></textarea></p>
+		<p><textarea id="Text1" cols="40" rows="5"></textarea></p>
 
 		
-		<p><input type="submit"></p>
+		<p><input id="send" type="submit"></p>
 	</form>
 </div>
 
