@@ -2,6 +2,12 @@
 <head>
 	<title> Museum Guest Book</title>
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Pinyon+Script" rel="stylesheet">
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_Q2aPSS4PCO5QNRM3R9zz5");
+   })();
+</script>
 	<style>
 	.title{
 		margin:auto;
@@ -32,6 +38,22 @@
 		text-align: center;
 		opacity: 1;
 	}
+	.form{
+		margin:auto;
+		width:50%;
+		padding: 10px;
+		background-color: white;
+		opacity:0.6;
+		margin-top: 100px;
+
+	}
+	input[type="text"]{
+		width:50%;
+		padding:10px;
+		margin:auto;
+		height:50%;
+
+	}
 	</style>
 </head>
 <body>
@@ -39,6 +61,13 @@
 	<header>Museum Guest Book</header>
 	
 	<p>Submit your thoughts and ideas here!</p>
+</div>
+<div class=form>
+	<form>
+
+		<input type="text">
+		<input type="submit">
+	</form>
 </div>
 
 
