@@ -81,12 +81,14 @@
 		   	// parameters: service_id, template_id, template_parameters
 		    emailjs.send("petriepeaches4_gmail_com","feedback_form",{html_message:$("#Text1").val()})
 		    .then(function(response) {
-			   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+			   alert("message sent!");
+			   $("#Text1").prop('disabled', false);
 			}, function(err) {
-			    alert(err);
+			    alert("Error!  Try again");
 			   console.log("FAILED. error=", err);
 			});
 
+			$("#Text1").prop('disabled', true);
 	   });
 	});
 </script>
